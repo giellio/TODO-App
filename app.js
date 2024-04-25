@@ -8,14 +8,14 @@ updateTodos()
 todoForm.addEventListener('submit', (event) => {
   event.preventDefault()
   addTodo()
-});
+})
 
 function addTodo () {
   const todoText = todoInput.value.trim()
   if (todoText !== '') {
     const todo = {
-        text: todoText,
-        completed: false
+      text: todoText,
+      completed: false
     }
     allTodos.push(todo)
     todoInput.value = ''
@@ -45,7 +45,7 @@ function createTodoElement (todo, todoIndex) {
                   </svg></button>`
   const deleteButton = li.querySelector('.delete-button')
   deleteButton.addEventListener('click', () => {
-      deleteTodo(todoIndex)
+    deleteTodo(todoIndex)
   })
   const checkbox = li.querySelector('input')
   checkbox.addEventListener('change', () => {
