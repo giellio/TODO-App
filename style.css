@@ -41,7 +41,7 @@ form{
     margin-bottom: 30px;
 }
 
-#todoInput{
+#todo-input{
     box-sizing: border-box;
     background-color: var(--secondary-colour);
     border: 2px solid var(--border-colour);
@@ -52,7 +52,7 @@ form{
     caret-color: var(--primary-colour);
 }
 
-#todoInput:focus{
+#todo-input:focus{
     outline: none;
 }
 
@@ -70,7 +70,7 @@ input[type=submit]{
     font-weight: 700;
 }
 
-.todoList{
+#todo-list{
     list-style: none;
     width: clamp(10vw, 50vw, 500px);
 }
@@ -87,7 +87,7 @@ input[type=submit]{
     margin-bottom: 10px;
 }
 
-.todoText{
+.todo-text{
     padding: .5rem;
     flex-grow: 1;
     transition: 200ms ease;
@@ -102,7 +102,7 @@ input[type=checkbox]:checked ~ .custom-checkbox{
     background-color: var(--primary-colour);
 }
 
-input[type=checkbox]:checked ~ .todoText{
+input[type=checkbox]:checked ~ .todo-text{
     text-decoration: line-through;
     color: var(--secondary-text-colour);
 }
@@ -121,17 +121,17 @@ input[type=checkbox]:checked ~ .todoText{
     cursor: pointer;
 }
 
-.deleteButton{
+.delete-button{
     background-color: var(--secondary-colour);
     border: none;
     border-radius: 1000px;
     cursor: pointer;
 }
 
-.deleteButton svg{
+.delete-button svg{
     transition: 200ms ease;
 }
 
-.deleteButton:hover svg{
+.delete-button:hover svg{
     fill: #ff0000;
 }

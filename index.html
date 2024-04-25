@@ -9,23 +9,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
+        <script src="app.js" defer></script>
     <title>TODO</title>
 </head>
 
 <body>
     <h1>TODO</h1>
-    <form>
-        <input type="text" name="todoText" id="todoInput" placeholder="New Task...">
+    <form autocomplete="off">
+        <input type="text" name="todo-text" id="todo-input" placeholder="New Task...">
         <input type="submit" value="ADD">
     </form>
-    <ul class="todoList">
-        <li class="todo">
-            <input type="checkbox" name="todo1Check" id="todo1" class="custom-checkbox">
+    <ul id="todo-list">
+        <!-- <li class="todo">
+            <input type="checkbox" name="todo1" id="todo1" class="custom-checkbox">
             <label for="todo1" class="custom-checkbox"><svg fill="var(--secondary-colour)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
                     <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
                 </svg></label>
-            <label class="todoText" for="todo1">Coding</label>
-            <button class="deleteButton"><svg xmlns="http://www.w3.org/2000/svg" fill="var(--secondary-text-colour)" height="24" viewBox="0 -960 960 960" width="24">
+            <label class="todo-text" for="todo1">Coding</label>
+            <button class="delete-button"><svg xmlns="http://www.w3.org/2000/svg" fill="var(--secondary-text-colour)" height="24" viewBox="0 -960 960 960" width="24">
                     <path
                         d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
                 </svg></button>
@@ -35,12 +36,12 @@
             <label for="todo2" class="custom-checkbox"><svg fill="var(--secondary-colour)" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
                     <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
                 </svg></label>
-            <label class="todoText" for="todo2">Shopping</label>
-            <button class="deleteButton"><svg xmlns="http://www.w3.org/2000/svg" fill="var(--secondary-text-colour)" height="24" viewBox="0 -960 960 960" width="24">
+            <label class="todo-text" for="todo2">Shopping</label>
+            <button class="delete-button"><svg xmlns="http://www.w3.org/2000/svg" fill="var(--secondary-text-colour)" height="24" viewBox="0 -960 960 960" width="24">
                     <path
                         d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
                 </svg></button>
-        </li>
+        </li> -->
     </ul>
 </body>
 
