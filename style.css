@@ -5,7 +5,7 @@
     --accent-colour: #3e436b;
     --secondary-colour: #2b2e3f;
     --border-colour: #242635; 
-    --secondary-text-colour: #555555;
+    --secondary-text-colour: #555;
 }
 
 *{
@@ -56,7 +56,7 @@ form{
     outline: none;
 }
 
-input[type=submit]{
+input[type="submit"]{
     background-color: var(--primary-colour);
     border-radius: 1000px;
     padding: 0.5rem 1rem;
@@ -94,19 +94,6 @@ input[type=submit]{
     cursor: pointer;
 }
 
-input[type=checkbox]{
-    display: none;
-}
-
-input[type=checkbox]:checked ~ .custom-checkbox{
-    background-color: var(--primary-colour);
-}
-
-input[type=checkbox]:checked ~ .todo-text{
-    text-decoration: line-through;
-    color: var(--secondary-text-colour);
-}
-
 .custom-checkbox{
     background-color: var(--secondary-colour);
     border-radius: 50%;
@@ -121,6 +108,19 @@ input[type=checkbox]:checked ~ .todo-text{
     cursor: pointer;
 }
 
+input[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .custom-checkbox{
+    background-color: var(--primary-colour);
+}
+
+input[type="checkbox"]:checked ~ .todo-text{
+    text-decoration: line-through;
+    color: var(--secondary-text-colour);
+}
+
 .delete-button{
     background-color: var(--secondary-colour);
     border: none;
@@ -133,5 +133,5 @@ input[type=checkbox]:checked ~ .todo-text{
 }
 
 .delete-button:hover svg{
-    fill: #ff0000;
+    fill: #f00;
 }
