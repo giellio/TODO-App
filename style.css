@@ -67,6 +67,7 @@ form {
     width: 100%;
     color: var(--text-colour);
     caret-color: var(--primary-colour);
+    font-size: inherit;
 }
 
 #todo-input:focus {
@@ -105,6 +106,7 @@ input[type="submit"] {
 }
 
 .todo-text {
+    font-size: inherit;
     padding: .5rem;
     flex-grow: 1;
     transition: 200ms ease;
