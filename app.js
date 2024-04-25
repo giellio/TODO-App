@@ -13,22 +13,22 @@ todoForm.addEventListener('submit', (event) => {
 function addTodo () {
   const todoText = todoInput.value.trim()
   if (todoText !== '') {
-      const todo = {
-          text: todoText,
-          completed: false
-      }
-      allTodos.push(todo)
-      todoInput.value = ''
-      updateTodos()
-      saveTodos()
+    const todo = {
+        text: todoText,
+        completed: false
+    }
+    allTodos.push(todo)
+    todoInput.value = ''
+    updateTodos()
+    saveTodos()
   }
 }
 
 function updateTodos () {
   todoListUL.innerHTML = ''
   allTodos.forEach((todo, todoIndex) => {
-      const element = createTodoElement(todo, todoIndex)
-      todoListUL.append(element)
+    const element = createTodoElement(todo, todoIndex)
+    todoListUL.append(element)
   })
 }
 
@@ -44,13 +44,13 @@ function createTodoElement (todo, todoIndex) {
                       <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
                   </svg></button>`
   const deleteButton = li.querySelector('.delete-button')
-  deleteButton.addEventListener("click", () => {
+  deleteButton.addEventListener('click', () => {
       deleteTodo(todoIndex)
   })
-  const checkbox = li.querySelector("input")
-  checkbox.addEventListener("change", () => {
-      allTodos[todoIndex].completed = checkbox.checked
-      saveTodos()
+  const checkbox = li.querySelector('input')
+  checkbox.addEventListener('change', () => {
+    allTodos[todoIndex].completed = checkbox.checked
+    saveTodos()
   })
   checkbox.checked = todo.completed
   return li
@@ -64,10 +64,10 @@ function deleteTodo (todoIndex) {
 
 function saveTodos () {
   const todosJson = JSON.stringify(allTodos)
-  localStorage.setItem("todos", todosJson)
+  localStorage.setItem('todos', todosJson)
 }
 
 function getTodos () {
-  const todos = localStorage.getItem("todos") || "[]"
+  const todos = localStorage.getItem('todos') || '[]'
   return JSON.parse(todos)
 }
