@@ -98,6 +98,7 @@ function importTodos () {
     })
     updateTodos()
     saveTodos()
+    importTodoFiles.value = null
   }
   reader.readAsText(file)
 }
