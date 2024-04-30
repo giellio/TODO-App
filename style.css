@@ -111,8 +111,7 @@ input[type="submit"]:hover {
     background-color: var(--secondary-colour);
     border: 2px solid var(--border-colour);
     border-radius: 1000px;
-    width: clamp(30vw, 50vw, 490px);
-    padding-right: .5rem;
+    width: 100%;
     margin-bottom: 10px;
 }
 
@@ -128,8 +127,8 @@ input[type="submit"]:hover {
     background-color: var(--secondary-colour);
     border-radius: 50%;
     border: 2px solid var(--primary-colour);
-    min-width: 20px;
-    min-height: 20px;
+    width: 33px;
+    height: 33px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,8 +153,9 @@ input[type="checkbox"]:checked~.todo-text {
 .delete-button {
     background-color: var(--secondary-colour);
     border: none;
-    border-radius: 1000px;
+    border-radius: 50%;
     cursor: pointer;
+    margin-right: .5rem;
 }
 
 .delete-button svg {
