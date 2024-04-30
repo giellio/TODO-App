@@ -1,6 +1,7 @@
 const todoForm = document.querySelector('form')
 const todoInput = document.getElementById('todo-input')
 const todoListUL = document.getElementById('todo-list')
+const importTodoFiles = document.getElementById('import')
 
 let allTodos = getTodos()
 updateTodos()
@@ -8,6 +9,11 @@ updateTodos()
 todoForm.addEventListener('submit', (event) => {
   event.preventDefault()
   addTodo()
+})
+
+importTodoFiles.addEventListener('change', (event) => {
+  event.preventDefault()
+  importTodos()
 })
 
 function addTodo () {
@@ -30,6 +36,7 @@ function updateTodos () {
     const element = createTodoElement(todo, todoIndex)
     todoListUL.append(element)
   })
+  readyToDoExport()
 }
 
 function createTodoElement (todo, todoIndex) {
@@ -70,4 +77,27 @@ function saveTodos () {
 function getTodos () {
   const todos = localStorage.getItem('todos') || '[]'
   return JSON.parse(todos)
+}
+
+function readyToDoExport () {
+  const todosJson = JSON.stringify(allTodos)
+  const downloadNode = document.getElementById('export')
+  const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(todosJson)
+  downloadNode.setAttribute('href', dataStr)
+  downloadNode.setAttribute('download', 'todo-list.json')
+}
+
+function importTodos () {
+  const file = importTodoFiles.files[0]
+  const reader = new FileReader()
+  reader.onload = function (event) {
+    const jsonData = JSON.parse(event.target.result)
+    jsonData.forEach(function (data) {
+      console.log(data)
+      allTodos.push(data)
+    })
+    updateTodos()
+    saveTodos()
+  }
+  reader.readAsText(file)
 }
