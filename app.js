@@ -82,16 +82,16 @@ function getTodos () {
 function readyToDoExport () {
   const todosJson = JSON.stringify(allTodos)
   const downloadNode = document.getElementById('export')
-  let dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(todosJson);
+  const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(todosJson)
   downloadNode.setAttribute('href', dataStr)
   downloadNode.setAttribute('download', 'todo-list.json')
 }
 
 function importTodos () {
   const file = importTodoFiles.files[0]
-  let reader = new FileReader()
+  const reader = new FileReader()
   reader.onload = function (event) {
-    let jsonData = JSON.parse(event.target.result)
+    const jsonData = JSON.parse(event.target.result)
     jsonData.forEach(function (data) {
       console.log(data)
       allTodos.push(data)
