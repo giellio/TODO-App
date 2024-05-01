@@ -121,14 +121,26 @@ input[type="submit"]:hover {
     flex-grow: 1;
     transition: 200ms ease;
     cursor: pointer;
+    overflow: scroll;
+    text-wrap: nowrap;
 }
 
-.custom-checkbox {
+.todo-text::-webkit-scrollbar {
+    display: none;
+}
+
+div.custom-checkbox {
+    min-height: 100%;
+    aspect-ratio: 1 / 1;
+    margin-right: 1rem;
+}
+
+label.custom-checkbox {
     background-color: var(--secondary-colour);
     border-radius: 50%;
     border: 2px solid var(--primary-colour);
-    width: 33px;
-    height: 33px;
+    min-height: 100%;
+    aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,7 +153,7 @@ input[type="checkbox"] {
     display: none;
 }
 
-input[type="checkbox"]:checked~.custom-checkbox {
+input[type="checkbox"]:checked~div.custom-checkbox label.custom-checkbox {
     background-color: var(--primary-colour);
 }
 
@@ -151,7 +163,7 @@ input[type="checkbox"]:checked~.todo-text {
 }
 
 .delete-button {
-    background-color: var(--secondary-colour);
+    background-color: transparent;
     border: none;
     border-radius: 50%;
     cursor: pointer;
