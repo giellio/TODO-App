@@ -69,6 +69,7 @@ form {
     color: var(--text-colour);
     caret-color: var(--primary-colour);
     font-size: inherit;
+    font-family: "JetBrains Mono", monospace;
 }
 
 #todo-input:focus {
