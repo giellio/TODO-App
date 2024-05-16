@@ -126,6 +126,10 @@ input[type="submit"]:hover {
     text-wrap: nowrap;
 }
 
+.todo-text:hover {
+    text-decoration: underline;
+}
+
 .todo-text::-webkit-scrollbar {
     display: none;
 }
